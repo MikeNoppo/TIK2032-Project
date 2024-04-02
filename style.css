@@ -1,0 +1,187 @@
+/* Style for the navigation bar */
+nav {
+    background: linear-gradient(to right, #64b5f6, #ffffff);
+    padding: 10px; /* Padding around the navigation bar */
+    text-align: center; /* Center-align the items in the navigation bar */
+    width: 100%; /* Set the width to 100% to ensure it spans the entire width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align the navigation items */
+}
+
+nav ul li {
+    margin-right: 10px; /* Add margin between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from the links */
+    color: #333; /* Text color for the links */
+    padding: 5px 10px; /* Padding for the links */
+    border-radius: 5px; /* Rounded corners for the links */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+nav ul li a:hover {
+    background-color: #ddd; /* Background color when hovered */
+}
+
+nav ul li a.active {
+    background-color: #007bff; /* Background color for active link */
+    color: #fff; /* Text color for active link */
+}
+
+
+
+
+
+
+body {
+    background: linear-gradient(to right, #64b5f6, #ffffff);/* Gradien diagonal dari biru ke putih */
+    color: #333; /* Warna teks */
+    
+}
+
+
+
+
+
+
+/* Style for the main heading */
+h1 {
+    font-size: 36px; /* Font size for the main heading */
+    color: #333; /* Text color for the main heading */
+    margin-bottom: 10px; /* Bottom margin for spacing */
+    text-align: center; /* Center-align the main heading */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Letter spacing for emphasis */
+    font-weight: bold; /* Bold font weight for emphasis */
+}
+
+/* Style for the subheading */
+h3 {
+    font-size: 24px; /* Font size for the subheading */
+    color: #555; /* Text color for the subheading */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+    text-align: center; /* Center-align the subheading */
+}
+
+
+/* Style for the header */
+header {
+    text-align: center; /* Center-align the content in the header */
+}
+
+/* Style for the main content */
+#main-content {
+    text-align: center; /* Center-align the content in the main section */
+    margin-top: 50px; /* Add top margin to create space between header and main content */
+}
+
+/* Style for the photo */
+#photo {
+    width: 200px; /* Set the width of the photo */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Round the corners of the photo */
+    margin-bottom: 10px; /* Add bottom margin to create space below the photo */
+}
+
+/* Style for the large image in the home section */
+.large-image {
+    width: 80%; /* Set the width of the image to 80% of the screen width */
+    max-width: 160px; /* Set maximum width for larger screens */
+    display: block; /* Center-align the image */
+    margin: 0 auto; /* Center-align the image horizontally */
+}
+
+
+
+  
+/* Style for the contact section */
+#contact-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.contact-details {
+    text-align: left;
+}
+
+.contact-details h2 {
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-family: Arial, sans-serif; /* Font family for the contact details */
+    font-size: 16px; /* Font size for the contact details */
+    color: #333; /* Text color for the contact details */
+    margin: 5px 0; /* Margin for spacing between paragraphs */
+}
+
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+/* Style for the blog content */
+#blog-content {
+    display: none;
+    background-color: #f8f8f8; /* Background color for the blog content */
+    padding: 20px; /* Padding around the content */
+}
+
+article {
+    background-color: #fff; /* Background color for each article */
+    padding: 20px; /* Padding around each article */
+    margin-bottom: 20px; /* Bottom margin between articles */
+    border-radius: 5px; /* Rounded corners for the articles */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+article h2 {
+    color: #333; /* Text color for the article headings */
+    font-size: 24px; /* Font size for the article headings */
+    margin-bottom: 10px; /* Bottom margin for the headings */
+}
+
+article p {
+    color: #666; /* Text color for the article content */
+    font-size: 16px; /* Font size for the article content */
+    line-height: 1.6; /* Line height for better readability */
+}       

@@ -3,27 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Manoppo Profil website</title>
+    <title>Michael Manoppo Profil Website</title>
     <link rel="icon" type="image/x-icon" href="Gambar/cuteIcon.png">
+    <link rel="stylesheet" href="style.css">
+ 
 </head>
-<body>
-    
-    <h1>Michael Manoppo</h1>
-    <h3 >Prodi Informatika</h3>
-    <br>
+<body> 
     <nav>
         <ul>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" onclick="loadPage('index.html')" class="active">Home</a></li>
+            <li><a href="#" onclick="loadPage('blog.html')">Blog</a></li>
+            <li><a href="#" onclick="loadPage('gallery.html')">Gallery</a></li>
+            <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
         </ul>
     </nav>
-    <hr>
+    
 
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hai saya Michael Biasa Dipanggil Mikel, saya sedang menempu pendidikan Informatika di universitas sam ratulangi Manado</p>
-    </section>
+    <div id="main-content">
+        <!-- Konten halaman utama akan dimuat di sini -->
+        <section id="home">
+            <h1>Welcome to </h1>
+            <h1>Michael Manoppo Portfolio</h1>
+            <h3>Prodi Informatika</h3>
+            <img id="photo" src="Gambar/Profil home.jpg" alt="Michael Manoppo Photo">
+            <p>Hai saya Michael Biasa Dipanggil Mikel, saya sedang menempu pendidikan Informatika di universitas sam ratulangi Manado</p>
+            <img class="large-image" src="Gambar/logo_unsrat___high_resolution.png" alt="Large Image">
+        </section>
 
+        <!-- Konten Blog -->
+        <section id="blog-content" style="display: none;">
+            <article>
+                <h2>Manfaat Yoga untuk Kesehatan Mental dan Fisik</h2>
+                <p>
+                    Yoga merupakan latihan fisik dan mental yang berasal dari India kuno. Manfaat yoga telah terbukti secara ilmiah untuk meningkatkan kesehatan mental dan fisik. 
+                    Latihan yoga seperti pose dan pernapasan dapat membantu mengurangi stres, meningkatkan fleksibilitas tubuh, memperkuat otot, dan meningkatkan keseimbangan dan koordinasi.
+                    Selain itu, yoga juga dapat meningkatkan fokus dan konsentrasi, membantu mengatasi insomnia, dan meningkatkan kualitas tidur. 
+                    Dengan rutin melakukan yoga, Anda dapat merasakan perubahan positif dalam kesehatan mental dan fisik Anda.
+                </p>
+            </article>
+            <hr>
+            <article>
+                <h2>Pengaruh Musik dalam Kehidupan Sehari-hari</h2>
+                <p>
+                    Musik memiliki pengaruh yang besar dalam kehidupan sehari-hari. Mendengarkan musik yang disukai dapat meningkatkan mood dan emosi positif, mengurangi stres, dan meningkatkan konsentrasi.
+                    Musik juga dapat menjadi pengiring dalam berbagai aktivitas, seperti berolahraga, belajar, atau bahkan saat bersantai. 
+                    Jenis musik yang didengarkan juga dapat memengaruhi suasana hati dan energi seseorang. 
+                    Dengan memilih musik yang tepat, Anda dapat menciptakan pengalaman yang lebih menyenangkan dan produktif dalam kegiatan sehari-hari.
+                </p>
+            </article>
+            <hr>
+            <article>
+                <h2>Teknologi Blockchain dan Potensinya di Masa Depan</h2>
+                <p>
+                    Teknologi blockchain telah menjadi perhatian utama dalam beberapa tahun terakhir. 
+                    Dikenal sebagai teknologi yang mendasari cryptocurrency seperti Bitcoin, blockchain memiliki potensi besar untuk mengubah berbagai industri, termasuk keuangan, logistik, dan kesehatan.
+                    Blockchain menyediakan sistem yang aman, transparan, dan terdesentralisasi untuk menyimpan data dan melakukan transaksi. 
+                    Potensi ini telah mendorong inovasi dan eksperimen baru dalam pemanfaatan blockchain, seperti kontrak pintar (smart contracts) dan identitas digital terdesentralisasi.
+                    Di masa depan, teknologi blockchain diprediksi akan terus berkembang dan memainkan peran penting dalam transformasi digital global.
+                </p>
+            </article>
+        </section>
+
+        <!-- Konten Gallery -->
+        <section id="gallery-content" style="display: none;">
+            <div class="gallery">
+                <img src="Gambar/unityBaju.jpg" alt="Gambar 1">
+                <img src="Gambar/unityGelang.jpg" alt="Gambar 2">
+                <img src="Gambar/unitySticker.jpg" alt="Gambar 3">
+                <img src="Gambar/cute 3.png" alt="Gambar 4">
+            </div>
+        </section>
+
+        <!-- Konten Contact -->
+        <section id="contact-content" style="display: none;">
+            <div class="contact-info">
+                <img src="Gambar/Profil home.jpg" alt="Your Photo">
+                <div class="contact-details">
+                    <h2>Contact Information</h2>
+                    <p><strong>Name:</strong> Michael Manoppo</p>
+                    <p><strong>Email:</strong> mikelnoppo03@gmail.com</p>
+                    <p><strong>Phone:</strong> +62 8134 2938 366</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/michael.manoppo.1" target="_blank"><img src="Gambar/facebook.png" alt="Facebook"></a>
+                        <a href="https://github.com/MikeNoppo" target="_blank"><img src="Gambar/GitHub.png" alt="GitHub"></a>
+                        <a href="https://www.instagram.com/mikelnoppo/" target="_blank"><img src="Gambar/Instagram_icon.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <footer>
+        <p>&copy; 2024 Michael Manoppo. All rights reserved.</p>
+    </footer>
+    <script>
+        function loadPage(pageName) {
+            // Semua konten dimulai dengan display: none
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('blog-content').style.display = 'none';
+            document.getElementById('gallery-content').style.display = 'none';
+            document.getElementById('contact-content').style.display = 'none';
+
+            // Hapus kelas active dari semua link navbar
+            let navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Tampilkan konten sesuai halaman yang dipilih
+            if (pageName === 'index.html') {
+                document.getElementById('home').style.display = 'block';
+            } else if (pageName === 'blog.html') {
+                document.getElementById('blog-content').style.display = 'block';
+            } else if (pageName === 'gallery.html') {
+                document.getElementById('gallery-content').style.display = 'block';
+            } else if (pageName === 'contact.html') {
+                document.getElementById('contact-content').style.display = 'block';
+            }
+
+            // Tambahkan kelas active ke link yang dipilih
+            let selectedLink = document.querySelector(`nav ul li a[href="#"][onclick="loadPage('${pageName}')"]`);
+            if (selectedLink) {
+                selectedLink.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
