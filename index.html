@@ -3,45 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Manoppo Profil Website</title>
-    <link rel="icon" type="image/x-icon" href="Gambar/cuteIcon.png">
+    <title>Michael Manoppo</title>
     <link rel="stylesheet" href="style.css">
- 
+    <script src="script.js"></script>
+
 </head>
-<body> 
-    <nav>
-        <ul>
-            <li><a href="#" onclick="loadPage('index.html')" class="active">Home</a></li>
-            <li><a href="#" onclick="loadPage('blog.html')">Blog</a></li>
-            <li><a href="#" onclick="loadPage('gallery.html')">Gallery</a></li>
-            <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
-        </ul>
-    </nav>
+<body>
+    <header class="header">
+        <a href= "index.html" class="logo"><span>Michael </span>Manoppo</a>
+        <nav class="navbar" id="navbar">
+            <a href="#A" class="active">home</a>
+            <a href="#A1">About</a>
+            <a href="#A2">Blog</a>
+            <a href="#A3">Gallery</a>
+            <a href="#">Project</a>
+        </nav>
+        <a href="#A5" class="contact">Contact Me</a>
+    </header>  
+
+    <section id="A" class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+
+            <h1>I'm <span>Michael<br></span>a Informatics Student</h1>
+
+            <p>Hey there, I'm Mikel – not your average perfectionist, but hey, I'll code my way to perfection! 😉</p>
+
+            <div class="btn-box">
+                <button class="btn-1">certificate</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="Gambar/selfie-kacamata.webp"alt="profile pict">
+        </div>
+    </section>
     
+    <section id="A1" class="about">
+        <div class="about-img">
+            <img src="Gambar/Profil home.jpg" alt="about me">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Hello <span>World!</span></h3>
+            <p>I'm in my fourth semester studying informatics engineering at Sam Ratulangi University.
+            I'm just starting to learn about coding, and I really love technology, especially programming.
+            I'm also a big fan of gaming, especially PUBG.</p>
+        </div>
+    </section>
 
-    <div id="main-content">
-        <!-- Konten halaman utama akan dimuat di sini -->
-        <section id="home">
-            <h1>Welcome to </h1>
-            <h1>Michael Manoppo Portfolio</h1>
-            <h3>Prodi Informatika</h3>
-            <img id="photo" src="Gambar/Profil home.jpg" alt="Michael Manoppo Photo">
-            <p>Hai saya Michael Biasa Dipanggil Mikel, saya sedang menempu pendidikan Informatika di universitas sam ratulangi Manado</p>
-            <img class="image" src="Gambar/logo_unsrat___high_resolution.png" alt="Large Image">
-        </section>
-
-        <!-- Konten Blog -->
-        <section id="blog-content" style="display: none;">
+    <section id="A2" class="blog">
+        <div class="blog-content">
+            <h2>Latest Blog Posts</h2>
             <article>
-                <h2>Manfaat Yoga untuk Kesehatan Mental dan Fisik</h2>
+                <h3>Manfaat Yoga untuk Kesehatan Mental dan Fisik</h3>
                 <p>
                     Yoga merupakan latihan fisik dan mental yang berasal dari India kuno. Manfaat yoga telah terbukti secara ilmiah untuk meningkatkan kesehatan mental dan fisik. 
                     Latihan yoga seperti pose dan pernapasan dapat membantu mengurangi stres, meningkatkan fleksibilitas tubuh, memperkuat otot, dan meningkatkan keseimbangan dan koordinasi.
                     Selain itu, yoga juga dapat meningkatkan fokus dan konsentrasi, membantu mengatasi insomnia, dan meningkatkan kualitas tidur. 
                     Dengan rutin melakukan yoga, Anda dapat merasakan perubahan positif dalam kesehatan mental dan fisik Anda.
                 </p>
+                <a href="https://www.rsbhaktiasih.com/berita/manfaat-yoga-bagi-kesehatan-fisik-dan-mental" target="_blank">Read More</a>
             </article>
-            <hr>
             <article>
                 <h2>Pengaruh Musik dalam Kehidupan Sehari-hari</h2>
                 <p>
@@ -50,8 +72,8 @@
                     Jenis musik yang didengarkan juga dapat memengaruhi suasana hati dan energi seseorang. 
                     Dengan memilih musik yang tepat, Anda dapat menciptakan pengalaman yang lebih menyenangkan dan produktif dalam kegiatan sehari-hari.
                 </p>
+                <a href="https://www.merdeka.com/trending/manfaat-musik-dalam-kehidupan-sehari-hari-bisa-tingkatkan-kecerdasan-kln.html" target="_blank">Read More</a>
             </article>
-            <hr>
             <article>
                 <h2>Teknologi Blockchain dan Potensinya di Masa Depan</h2>
                 <p>
@@ -61,70 +83,41 @@
                     Potensi ini telah mendorong inovasi dan eksperimen baru dalam pemanfaatan blockchain, seperti kontrak pintar (smart contracts) dan identitas digital terdesentralisasi.
                     Di masa depan, teknologi blockchain diprediksi akan terus berkembang dan memainkan peran penting dalam transformasi digital global.
                 </p>
+                <a href="https://blog.unmaha.ac.id/mengenal-lebih-dalam-teknologi-blockchain-dan-potensinya-di-masa-depan" target="_blank">Read More</a>
             </article>
-        </section>
+        </div>
+    </section> 
+    
+    <section id="A3" >
+        <div class="gallery">
+            <img src="Gambar/unityBaju.jpg" alt="Gambar 1" onclick="openImage(this.src)">
+            <img src="Gambar/unityGelang.jpg" alt="Gambar 2" onclick="openImage(this.src)">
+            <img src="Gambar/unitySticker.jpg" alt="Gambar 3" onclick="openImage(this.src)">
+            <img src="Gambar/cute1.jpeg" alt="Gambar 4" onclick="openImage(this.src)">
+        </div>
+    </section>
 
-        <!-- Konten Gallery -->
-        <section id="gallery-content" style="display: none;">
-            <div class="gallery">
-                <img src="Gambar/unityBaju.jpg" alt="Gambar 1">
-                <img src="Gambar/unityGelang.jpg" alt="Gambar 2">
-                <img src="Gambar/unitySticker.jpg" alt="Gambar 3">
-                <img src="Gambar/cute 3.png" alt="Gambar 4">
-            </div>
-        </section>
+    <footer id="A5" class="footer">
+        <div class="social">
+            <a href="https://web.facebook.com/michael.manoppo.1" target="_blank"><img src="Gambar/facebook.png" alt="Facebook"></a>
+            <a href="https://github.com/MikeNoppo" target="_blank"><img src="Gambar/GitHub.png" alt="GitHub"></a>
+            <a href="https://www.instagram.com/mikelnoppo/" target="_blank"><img src="Gambar/Instagram_icon.png" alt="Instagram"></a>
+        </div>
 
-        <!-- Konten Contact -->
-        <section id="contact-content" style="display: none;">
-            <div class="contact-info">
-                <img src="Gambar/Profil home.jpg" alt="Your Photo">
-                <div class="contact-details">
-                    <h2>Contact Information</h2>
-                    <p><strong>Name:</strong> Michael Manoppo</p>
-                    <p><strong>Email:</strong> mikelnoppo03@gmail.com</p>
-                    <p><strong>Phone:</strong> +62 8134 2938 366</p>
-                    <div class="social-links">
-                        <a href="https://web.facebook.com/michael.manoppo.1" target="_blank"><img src="Gambar/facebook.png" alt="Facebook"></a>
-                        <a href="https://github.com/MikeNoppo" target="_blank"><img src="Gambar/GitHub.png" alt="GitHub"></a>
-                        <a href="https://www.instagram.com/mikelnoppo/" target="_blank"><img src="Gambar/Instagram_icon.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </div>
-    <footer>
-        <p>&copy; 2024 Michael Manoppo. All rights reserved.</p>
+        <ul class="list">
+            <li>
+                <a href="#A1">About me</a>
+            </li>
+            <li>
+                <a href="https://wa.me/6281342938366" target="_blank">FAQ</a>
+            </li>
+            <li>
+                <a href="">Don't click</a>
+            </li>
+        </ul>
+
+        <p class="copyright">&copy; Michael Manoppo | All rights reserved</p>
     </footer>
-    <script>
-        function loadPage(pageName) {
-            // Semua konten dimulai dengan display: none
-            document.getElementById('home').style.display = 'none';
-            document.getElementById('blog-content').style.display = 'none';
-            document.getElementById('gallery-content').style.display = 'none';
-            document.getElementById('contact-content').style.display = 'none';
-
-            // Hapus kelas active dari semua link navbar
-            let navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            // Tampilkan konten sesuai halaman yang dipilih
-            if (pageName === 'index.html') {
-                document.getElementById('home').style.display = 'block';
-            } else if (pageName === 'blog.html') {
-                document.getElementById('blog-content').style.display = 'block';
-            } else if (pageName === 'gallery.html') {
-                document.getElementById('gallery-content').style.display = 'block';
-            } else if (pageName === 'contact.html') {
-                document.getElementById('contact-content').style.display = 'block';
-            }
-
-            // Tambahkan kelas active ke link yang dipilih
-            let selectedLink = document.querySelector(`nav ul li a[href="#"][onclick="loadPage('${pageName}')"]`);
-            if (selectedLink) {
-                selectedLink.classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>
+
