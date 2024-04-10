@@ -157,7 +157,7 @@ span{
     background-color: rgba(0,0,0,0.6);
     width: 50px;
 }
-
+    
 
 .about{
     display: flex;
@@ -241,7 +241,18 @@ span{
 .gallery {
     min-height: 100vh;
     background: #e7f2fd;
+    overflow:hidden ;
 }
+.gallery h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 30px;
+}
+
 .container {
     position: relative;
     max-width: 1350px;
@@ -250,6 +261,9 @@ span{
     margin: 50px auto;
     gap: 10px;
     margin-bottom: 20px;
+    overflow-y: auto; 
+    max-height: calc(100vh - 100px); 
+
 }
 .filter-buttons{
     flex-wrap: wrap;
@@ -316,9 +330,6 @@ span{
     font-size: 18px;
     color: #333;
 }
-
-
-
 
 
 /* Gallery styles for the popup container */

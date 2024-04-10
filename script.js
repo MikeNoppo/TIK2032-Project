@@ -7,22 +7,21 @@ window.addEventListener("scroll", function() {
 // Ambil semua link dalam navigasi
 const navLinks = document.querySelectorAll('.navbar a');
 
-// Loop melalui setiap link dan tambahkan event listener untuk menangani klik
 navLinks.forEach(link => {
 link.addEventListener('click', function(event) {
-    // Hentikan event default agar link tidak mengarahkan ke halaman lain
+
     event.preventDefault();
 
-    // Hapus class active dari semua link
+
     navLinks.forEach(navLink => navLink.classList.remove('active'));
 
-    // Tambahkan class active pada link yang diklik
+   
     this.classList.add('active');
 
-    // Scroll ke bagian yang sesuai dengan id link yang diklik
-    const targetId = this.getAttribute('href').substring(1); // Ambil id target tanpa tanda "#"
-    const targetElement = document.getElementById(targetId); // Cari elemen dengan id target
-    targetElement.scrollIntoView({ behavior: 'smooth' }); // Gulir halaman ke elemen target dengan efek smooth
+    
+    const targetId = this.getAttribute('href').substring(1); 
+    const targetElement = document.getElementById(targetId); 
+    targetElement.scrollIntoView({ behavior: 'smooth' }); 
 });
 });
 
@@ -79,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-buttons button');
     const filterablePhotos = document.querySelectorAll('.filterable-photo .photo');
 
+
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const filterId = button.id;
@@ -96,5 +96,16 @@ document.addEventListener('DOMContentLoaded', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
         });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const certificateBtn = document.getElementById('certificateBtn');
+
+    certificateBtn.addEventListener('click', (event) => {
+        event.preventDefault(); 
+        const targetId = certificateBtn.getAttribute('href').substring(1); 
+        const targetElement = document.getElementById(targetId); 
+        targetElement.scrollIntoView({ behavior: 'smooth' });
     });
 });
