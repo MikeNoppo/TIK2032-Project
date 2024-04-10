@@ -6,6 +6,7 @@
     <title>Michael Manoppo</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="Gambar/cute2.png">
 
 </head>
 <body>
@@ -88,14 +89,69 @@
         </div>
     </section> 
     
-    <section id="A3" >
-        <div class="gallery">
-            <img src="Gambar/unityBaju.jpg" alt="Gambar 1" onclick="openImage(this.src)">
-            <img src="Gambar/unityGelang.jpg" alt="Gambar 2" onclick="openImage(this.src)">
-            <img src="Gambar/unitySticker.jpg" alt="Gambar 3" onclick="openImage(this.src)">
-            <img src="Gambar/cute1.jpeg" alt="Gambar 4" onclick="openImage(this.src)">
+    <section id="A3" class="gallery">
+        <div class="container">
+            <div class="filter-buttons">
+                <button id="p1" class="active">Show all</button>
+                <button id="p2">Azariah</button>
+                <button id="p3">Malefincent</button>
+                <button id="p4">Michael</button>
+                <button id="p5">Unity</button>
+                <button id="p6">Certificate</button>
+                
+            </div>
+    
+            <div class="filterable-photo">
+                <!--Unity Photo-->
+                    <div class="photo" id="p5">
+                        <img src="Gambar/unitySticker.jpg" alt="Unity" onclick="openImage(this.src)">
+                        <div class="photo-body">
+                            <h6 class="photo-title">Unity</h6>
+                            <p class="photo-text">Sudah habis ya adik</p>
+                        </div>
+                    </div>
+                    <div class="photo" id="p5">
+                        <img src="Gambar/unityBaju.jpg" alt="Unity"onclick="openImage(this.src)">
+                        <div class="photo-body">
+                            <h6 class="photo-title">Unity</h6>
+                            <p class="photo-text">Sudah habis ya adik</p>
+                        </div>
+                    </div>
+                    <div class="photo" id="p5">
+                        <img src="Gambar/unityGelang.jpg" alt="Unity"onclick="openImage(this.src)">
+                        <div class="photo-body">
+                            <h6 class="photo-title">Unity</h6>
+                            <p class="photo-text">Sudah habis ya adik</p>
+                        </div>
+                    </div>
+                    <!--Michael Photo-->
+                    <div class="photo" id="p4">
+                        <img src="Gambar/Profil home.jpg" alt="Michael"onclick="openImage(this.src)">
+                        <div class="photo-body">
+                            <h6 class="photo-title">Mikel</h6>
+                            <p class="photo-text">Bocil baru tau HP</p>
+                        </div>
+                    </div>
+                    <div class="photo" id="p4">
+                        <img src="Gambar/selfie-kacamata.webp" alt="Michael"onclick="openImage(this.src)">
+                        <div class="photo-body">
+                            <h6 class="photo-title">Mikel</h6>
+                            <p class="photo-text">Turn 20 years old that day</p>
+                        </div>
+                    </div>
+                    <!--Azariah Photo-->
+                    <!--Certi-->
+                    <div class="photo" id="p6">
+                        <img src="Gambar/SoloLearn C++.png" alt="C++"onclick="openImage(this.src)">
+                        <div class="photo-body">
+                            <h6 class="photo-title">SoloLearn</h6>
+                            <p class="photo-text">My first Certificate</p>
+                        </div>
+                    </div>
+            </div>
         </div>
     </section>
+    
 
     <footer id="A5" class="footer">
         <div class="social">

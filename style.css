@@ -12,8 +12,8 @@
 }
 
 .header.sticky {
-    padding: 10px 12%; /* Ubah sesuai kebutuhan */
-    background: rgba(0,0,0,0.6); /* Ubah sesuai kebutuhan */
+    padding: 10px 12%; 
+    background: rgba(0,0,0,0.6); 
 }
 .header{
     position: fixed;
@@ -54,8 +54,8 @@ span{
 
 
 .navbar.sticky {
-    padding: 10px 0; /* Ubah sesuai kebutuhan */
-    background-color: #040a18; /* Ubah sesuai kebutuhan */
+    padding: 10px 0; 
+    background-color: #040a18; 
 }
 
     .navbar a{
@@ -191,7 +191,6 @@ span{
     margin: 2em 0 3em;
 }
 
-
 /* Blog Section */
 .blog {
     padding: 80px 12%;
@@ -228,9 +227,9 @@ span{
     text-align: center;
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Tengahkan horizontal */
-    align-items: center; /* Tengahkan vertikal */
-    font-weight: bold; /* Tambahkan tebal (bold) */
+    justify-content: center; 
+    align-items: center; 
+    font-weight: bold; 
 }
 
 .blog-content a:hover{ 
@@ -240,25 +239,84 @@ span{
 
 
 .gallery {
+    min-height: 100vh;
+    background: #e7f2fd;
+}
+.container {
+    position: relative;
+    max-width: 1350px;
+    width: 100%;
+    padding: 20px;
+    margin: 50px auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter-buttons{
+    flex-wrap: wrap;
     display: flex;
-    flex-direction: column; /* Tampilkan gambar secara vertikal */
-    gap: 10px; /* Jarak antar gambar */
-    align-items: center; /* Posisikan gambar-gambar di tengah secara horizontal */
+    align-items: center;
+    gap: 10px;
 }
 
-.gallery img {
-    max-width: 43%; /* Maksimum lebar gambar */
-    height: auto; /* Menghindari gambar terlalu besar */
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    scale: 50px;
+.filter-buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.05);
 }
 
-
-.gallery img:hover {
-    transform: scale(1.05); /* Efek scaling saat hover */
+.filter-buttons button:hover {
+    color: orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transition: scale(1.1);
 }
+.filter-buttons button.active {
+    background: orangered;
+    color: white;
+}
+.filterable-photo {
+    display: flex;
+    margin-top: 25px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.photo {
+    flex-grow: 1;
+    flex-basis: 300px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.05);
+}
+.photo.hide {
+    display: none;
+}
+
+.photo img {
+    width: 100%;
+    height: 210px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+.photo-body {
+    padding: 15px 20px 20px;
+}
+.photo-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+.photo-text {
+    font-size: 18px;
+    color: #333;
+}
+
 
 
 
@@ -271,7 +329,7 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Background overlay color */
+    background-color: rgba(0, 0, 0, 0.7); 
     z-index: 999;
 }
 
@@ -284,7 +342,7 @@ span{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Box shadow effect */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
 }
 
@@ -307,7 +365,7 @@ span{
 }
 
 .close-btn:hover {
-    background-color: #ff4444; /* Change color on hover */
+    background-color: #ff4444; 
 }
 
 
@@ -316,7 +374,7 @@ span{
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: orangered;
+    background-color: #333;
 }
 .footer .social{
     text-align: center;
@@ -325,7 +383,6 @@ span{
 }
 .footer .social a{
     font-size: 24px;
-    color: white;
     border: 2px solid orangered;
     width: 40px;
     height: 40px;

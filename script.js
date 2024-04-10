@@ -72,4 +72,29 @@ function openImage(imageSrc) {
     document.body.appendChild(popupContainer);
 
     popupContainer.style.display = 'block';
+
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    const filterablePhotos = document.querySelectorAll('.filterable-photo .photo');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterId = button.id;
+
+            filterablePhotos.forEach(photo => {
+                const photoId = photo.id;
+
+                if (filterId === 'p1' || filterId === photoId) {
+                    photo.classList.remove('hide');
+                } else {
+                    photo.classList.add('hide');
+                }
+            });
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+});
