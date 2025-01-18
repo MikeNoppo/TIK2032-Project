@@ -50,7 +50,6 @@ window.addEventListener('scroll', () => {
 });
 });
 
-
 function openImage(imageSrc) {
     var popupContainer = document.createElement('div');
     popupContainer.className = 'popup-container';
@@ -109,3 +108,24 @@ document.addEventListener('DOMContentLoaded', () => {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+document.querySelectorAll('.footer-nav a').forEach((icon) => {
+    icon.addEventListener('mouseenter', () => {
+      icon.style.transform = 'scale(1.1)';
+    });
+  
+    icon.addEventListener('mouseleave', () => {
+      icon.style.transform = 'scale(1)';
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const animatedTexts = document.querySelectorAll(".animated-text");
+  
+    animatedTexts.forEach((element, index) => {
+      const delay = index * 300; // Penundaan animasi (ms)
+      setTimeout(() => {
+        element.classList.add("animate");
+      }, delay);
+    });
+  });
