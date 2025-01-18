@@ -129,3 +129,45 @@ document.querySelectorAll('.footer-nav a').forEach((icon) => {
       }, delay);
     });
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const typingText = document.querySelector(".typing-text");
+    const words = ["Me", "Mikel"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+  
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      const currentText = typingText.textContent;
+  
+      if (!isDeleting) {
+        // Tambahkan karakter satu per satu
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+  
+        // Jika selesai mengetik, tunggu sebentar lalu mulai menghapus
+        if (charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000); // Tunggu 1 detik sebelum menghapus
+          return;
+        }
+      } else {
+        // Hapus karakter satu per satu
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+  
+        // Jika selesai menghapus, pindah ke kata berikutnya
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length; // Loop kembali ke kata pertama
+        }
+      }
+  
+      setTimeout(typeEffect, isDeleting ? 100 : 150); // Kecepatan mengetik & menghapus
+    }
+  
+    // Mulai efek pengetikan
+    typeEffect();
+  });
+  

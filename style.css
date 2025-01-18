@@ -228,6 +228,26 @@ span{
     margin: 2em 0 3em;
 }
 
+.typing-text {
+    display: inline-block;
+    position: relative;
+    color: orangered;
+  }
+  
+  .typing-text::after {
+    content: '|'; /* Kursor */
+    position: absolute;
+    right: -5px;
+    animation: blink 0.7s steps(1) infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+
 /* Blog Section */
 .blog {
     padding: 80px 12%;
