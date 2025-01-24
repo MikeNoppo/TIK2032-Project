@@ -61,16 +61,31 @@ function openImage(imageSrc) {
     var closeBtn = document.createElement('span');
     closeBtn.className = 'close-btn';
     closeBtn.innerHTML = '&times;';
-    closeBtn.onclick = function() {
-    popupContainer.style.display = 'none';
-    };
+    
+    function closePopup() {
+        popupContainer.classList.remove('active');
+        setTimeout(() => {
+            popupContainer.style.display = 'none';
+            document.body.removeChild(popupContainer);
+        }, 300);
+    }
+
+    closeBtn.onclick = closePopup;
+
+    // Tambahkan event listener untuk tombol ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopup();
+        }
+    });
 
     popupContainer.appendChild(closeBtn);
     popupContainer.appendChild(popupImage);
     document.body.appendChild(popupContainer);
 
-    popupContainer.style.display = 'block';
-
+    popupContainer.style.display = 'flex';
+    void popupContainer.offsetWidth;
+    popupContainer.classList.add('active');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -170,4 +185,19 @@ document.querySelectorAll('.footer-nav a').forEach((icon) => {
     // Mulai efek pengetikan
     typeEffect();
   });
+  
+document.addEventListener('DOMContentLoaded', () => {
+    const dontClickLink = document.querySelector('a[href="#dontclick"]');
+    const jumpscare = document.getElementById('jumpscare');
+    
+    dontClickLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Tampilkan jumpscare
+        jumpscare.style.display = 'flex';
+        setTimeout(() => {
+            jumpscare.style.display = 'none';
+        }, 3000);
+    });
+});
   
