@@ -186,18 +186,47 @@ document.querySelectorAll('.footer-nav a').forEach((icon) => {
     typeEffect();
   });
   
-document.addEventListener('DOMContentLoaded', () => {
-    const dontClickLink = document.querySelector('a[href="#dontclick"]');
+
+function showJumpscare(event) {
+    event.preventDefault();
     const jumpscare = document.getElementById('jumpscare');
+    jumpscare.style.display = 'flex';
     
-    dontClickLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Tampilkan jumpscare
-        jumpscare.style.display = 'flex';
+    // Trigger reflow
+    void jumpscare.offsetWidth;
+    
+    // Add active class for animation
+    jumpscare.classList.add('active');
+    
+    // Remove after delay
+    setTimeout(() => {
+        jumpscare.classList.remove('active');
         setTimeout(() => {
             jumpscare.style.display = 'none';
-        }, 3000);
-    });
+        }, 300); // Match transition duration
+    }, 3000);
+}
+
+function showFAQ(event) {
+    event.preventDefault();
+    const faqPopup = document.getElementById('faq-popup');
+    faqPopup.style.display = 'flex';
+    void faqPopup.offsetWidth;
+    faqPopup.classList.add('active');
+}
+
+function closeFAQ() {
+    const faqPopup = document.getElementById('faq-popup');
+    faqPopup.classList.remove('active');
+    setTimeout(() => {
+        faqPopup.style.display = 'none';
+    }, 300);
+}
+
+// Close popup when clicking outside
+document.addEventListener('click', function(event) {
+    const faqPopup = document.getElementById('faq-popup');
+    if (event.target === faqPopup) {
+        closeFAQ();
+    }
 });
-  
