@@ -288,14 +288,36 @@
 
         <div id="footer-links" class="footer-links">
             <a href="#about">About me</a>
-            <a href="#faq">FAQ</a>
-            <a href="#dontclick">Don't click</a>
+            <a href="#faq" onclick="showFAQ(event)">FAQ</a>
+            <a href="#dontclick" onclick="showJumpscare(event)">Don't click</a>
         </div>
-
+        <div id="jumpscare" class="jumpscare">
+            <h1>💖UWU💖</h1>
+        </div>
+        
+        <div id="faq-popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <h2>Contact for FAQ</h2>
+                <p>You can reach me through:</p>
+                <div class="contact-options">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mikelnoppo03@gmail.com" target="_blank" class="contact-btn email-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/552/552486.png" alt="Email">
+                        Email
+                    </a>
+                    <a href="https://t.me/YourTelegramUsername" class="contact-btn telegram-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+                        Telegram
+                    </a>
+                </div>
+                <button class="close-popup" onclick="closeFAQ()">×</button>
+            </div>
+        </div>
+        
         <div class="footer-copyright">
             © Michael Manoppo | All rights reserved
         </div>
     </footer>
+
 
     <script src="script.js"></script>
 </body>
